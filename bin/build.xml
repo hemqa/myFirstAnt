@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<project default="main">
+    <target name="main" depends="compile, compress" description="Main target">
+        <echo>
+            Building the My Ant project.jar file.
+        </echo>
+    </target>
+  
+    <target name="compile" description="Compilation target">
+        <javac srcdir="src/org/ant/jenkin"/>
+    </target>
+  
+  <target name="compress" description="Compression target">
+        <jar jarfile="myFirstAntProject.jar" basedir="bin/org/ant/jenkin" includes="*.class" />
+  </target>
+</project>
